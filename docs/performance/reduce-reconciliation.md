@@ -103,7 +103,7 @@ If we add a new item to the beginning, then we'll end up with a list like this:
 
 When Roact reconciles the underlying `ImageLabel` objects, it will need to change their icons so that the item at `[1]` has the potion icon, the item at `[2]` has the sword icon, and a new `ImageLabel` is added at `[3]` with the shield icon.
 
-We'd like for Roact to know that the new item was added at `[1]` and that the sword and sheild items simply moved down in the list. Then it can adjust their LayoutOrder properties and let the Roblox UI system resolve the rest.
+We'd like for Roact to know that the new item was added at `[1]` and that the sword and shield items simply moved down in the list. Then it can adjust their LayoutOrder properties and let the Roblox UI system resolve the rest.
 
 So let's fix it! We'll make our list of `Item` elements use the item's id for its keys instead of the indexes in the `items` list:
 
